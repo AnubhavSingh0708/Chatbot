@@ -4,10 +4,10 @@
 
 html {
 	height: 100%;
-font-size: 20%;
 }
 
 body {
+	font-size: 200%;
   font-family: 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, Helvetica,
     sans-serif;
@@ -45,6 +45,7 @@ span {
 }
  
 input { 
+	font-size: 200%;
 	 position: fixed;
   bottom: 0;
   left: 0;
@@ -52,7 +53,7 @@ input {
 	height:10vh;
 	border: 10; 
 	margin-left: auto;
-	border-radius: 40%; 
+	border-radius: 10%; 
 }
 button { 
 	height:10vh;
