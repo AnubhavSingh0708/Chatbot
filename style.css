@@ -48,11 +48,20 @@ input {
 	 position: fixed;
   bottom: 0;
   left: 0;
-	border: 0; 
+	border: 10; 
+	margin-left: auto;
+	border-radius: 10%; 
+	padding:5%;
+}
+button { 
+	 position: fixed;
+  bottom: 0;
+  left: 0;
+	padding:5%;
+	border: 10; 
 	margin-left: auto;
 	border-radius: 10%; 
 }
-
 .messages {
 	overflow: scroll;
 	height: 100vh;
