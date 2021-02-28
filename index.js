@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const inputField = document.getElementById("input");
-  inputField.addEventListener("keydown", (e) => {
-    if (e.code === "Enter") {
+ document.getElementById("send").addEventListener("click", function() {
       let input = inputField.value;
       inputField.value = "";
       output(input);
-    }
   });
 });
 
