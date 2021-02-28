@@ -25,6 +25,7 @@ const prompts = [
   ["no","not sure","maybe","no thanks"],
   [""],
   ["haha","ha","lol","hehe","funny","joke"]
+  ["tell me a joke","one joke please","Tell me a joke","One joke please","one more joke please","One more joke please"]
 ]
 
 // Possible responses, in corresponding order
@@ -58,6 +59,7 @@ const replies = [
   ["That's ok","I understand","What do you want to talk about?"],
   ["Please say something :("],
   ["Haha!","Good one!"]
+  ["what will you call a rose which wants to go to moon Gulab Ja moon","what do elves larn at school elf-a-bet"]
 ]
 
 // Random for any other user input
