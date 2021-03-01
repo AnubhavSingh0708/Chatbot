@@ -61,7 +61,7 @@ recognition.onresult = function(event) {
   // We then return the transcript property of the SpeechRecognitionAlternative object
   var color = event.results[0][0].transcript;
   diagnostic.textContent =  color + '.';
-current.value = color
+theInput.value = color
   console.log('Confidence: ' + event.results[0][0].confidence);
 }
 
