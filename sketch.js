@@ -39,7 +39,7 @@ recognition.maxAlternatives = 1;
 var diagnostic = document.querySelector('.output');
 var bg = document.querySelector('html');
 var hints = document.querySelector('.hints');
- var theInput = document.getElementById("input").value;
+ var theInput = document.getElementById("input");
 var colorHTML= '';
 colors.forEach(function(v, i, a){
   console.log(v, i);
