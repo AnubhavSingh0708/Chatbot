@@ -2,7 +2,8 @@ var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
-var colors = ["hi", "hey", "hello", "good morning", "good afternoon","how are you", "how is life", "how are things","what are you doing", "what is going on", "what is up","how old are you",        
+var colors = ["hi", "hey", "hello", "good morning", "good afternoon","how are you", "how is life", "how are things",
+"what are you doing", "what is going on", "what is up","how old are you",        
   "who are you", "are you human", "are you bot", "are you human or bot",
  "who created you", "who made you",
  "your name please",
@@ -38,17 +39,17 @@ recognition.maxAlternatives = 1;
 var diagnostic = document.querySelector('.output');
 var bg = document.querySelector('html');
 var hints = document.querySelector('.hints');
-
+ var theInput = document.getElementById("input").value;
 var colorHTML= '';
 colors.forEach(function(v, i, a){
   console.log(v, i);
-  document.getElementById("input").value =v;
 });
+hints.innerHTML = 'Tap/click then say a color to change the background color of the app. Try ' + colorHTML + '.';
 
-document.body.onclick = function() {
+diagnostic.addEventListener("click", function(){
   recognition.start();
   console.log('Ready to receive a color command.');
-}
+});
 
 recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
@@ -60,6 +61,8 @@ recognition.onresult = function(event) {
   // The second [0] returns the SpeechRecognitionAlternative at position 0.
   // We then return the transcript property of the SpeechRecognitionAlternative object
   var color = event.results[0][0].transcript;
+  diagnostic.textContent =  color + '.';
+current.value = color
   console.log('Confidence: ' + event.results[0][0].confidence);
 }
 
