@@ -2,33 +2,27 @@ var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
-var colors = [
-  ["hi", "hey", "hello", "good morning", "good afternoon"],
-  ["how are you", "how is life", "how are things"],
-  ["what are you doing", "what is going on", "what is up"],
-  ["how old are you"],
-  ["who are you", "are you human", "are you bot", "are you human or bot"],
-  ["who created you", "who made you"],
-  [
-    "your name please",
+var colors = ["hi", "hey", "hello", "good morning", "good afternoon","how are you", "how is life", "how are things","what are you doing", "what is going on", "what is up","how old are you",        
+  "who are you", "are you human", "are you bot", "are you human or bot",
+ "who created you", "who made you",
+ "your name please",
     "your name",
     "may i know your name",
     "what is your name",
-    "what call yourself"
-  ],
-  ["i love you"],
-  ["happy", "good", "fun", "wonderful", "fantastic", "cool"],
-  ["bad", "bored", "tired"],
-  ["help me", "tell me story"],
-  ["ah", "yes", "ok", "okay", "nice"],
-  ["bye", "good bye", "goodbye", "see you later"],
-  ["what should i eat today"],
-  ["bro"],
-  ["what", "why", "how", "where", "when"],
-  ["no","not sure","maybe","no thanks"],
-  [""],
-  ["haha","ha","lol","hehe","funny","joke"]
-  ["tell me a joke","one joke please","Tell me a joke","One joke please","one more joke please","One more joke please"]
+    "what call yourself",
+  "i love you",
+  "happy", "good", "fun", "wonderful", "fantastic", "cool",
+  "bad", "bored", "tired",
+  "help me", "tell me story",
+ "ah", "yes", "ok", "okay", "nice",
+  "bye", "good bye", "goodbye", "see you later",
+  "what should i eat today",
+  "bro",
+  "what", "why", "how", "where", "when",
+  "no","not sure","maybe","no thanks",
+  "",
+  "haha","ha","lol","hehe","funny","joke",
+  "tell me a joke","one joke please","Tell me a joke","One joke please","one more joke please","One more joke please"
 ];
 var grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;'
 
