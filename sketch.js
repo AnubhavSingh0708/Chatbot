@@ -44,7 +44,6 @@ var colorHTML= '';
 colors.forEach(function(v, i, a){
   console.log(v, i);
 });
-hints.innerHTML = 'Tap/click then say a color to change the background color of the app. Try ' + colorHTML + '.';
 
 diagnostic.addEventListener("click", function(){
   recognition.start();
