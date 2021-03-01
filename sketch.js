@@ -48,6 +48,7 @@ var hints = document.querySelector('.hints');
 var colorHTML= '';
 colors.forEach(function(v, i, a){
   console.log(v, i);
+  document.getElementById("input").value =color;
 });
 
 document.body.onclick = function() {
