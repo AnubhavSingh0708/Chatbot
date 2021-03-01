@@ -58,6 +58,16 @@ input {
 button { 
 	height:10vh;
 	 position: fixed;
+  bottom: 20%;
+ right: 0;
+	padding:5%;
+	border: 10; 
+	margin-left: auto;
+	border-radius: 10%; 
+}
+#send { 
+	height:10vh;
+	 position: fixed;
   bottom: 0;
  right: 0;
 	padding:5%;
