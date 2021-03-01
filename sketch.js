@@ -2,8 +2,35 @@ var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
-var colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', 'crimson', 'cyan', 'fuchsia', 'ghostwhite', 'gold', 'goldenrod', 'gray', 'green', 'indigo', 'ivory', 'khaki', 'lavender', 'lime', 'linen', 'magenta', 'maroon', 'moccasin', 'navy', 'olive', 'orange', 'orchid', 'peru', 'pink', 'plum', 'purple', 'red', 'salmon', 'sienna', 'silver', 'snow', 'tan', 'teal', 'thistle', 'tomato', 'turquoise', 'violet', 'white', 'yellow'];
-var grammar = '#JSGF V1.0; grammar prompts; public <color> = ' + prompts.join(' | ') + ' ;'
+var colors = [
+  ["hi", "hey", "hello", "good morning", "good afternoon"],
+  ["how are you", "how is life", "how are things"],
+  ["what are you doing", "what is going on", "what is up"],
+  ["how old are you"],
+  ["who are you", "are you human", "are you bot", "are you human or bot"],
+  ["who created you", "who made you"],
+  [
+    "your name please",
+    "your name",
+    "may i know your name",
+    "what is your name",
+    "what call yourself"
+  ],
+  ["i love you"],
+  ["happy", "good", "fun", "wonderful", "fantastic", "cool"],
+  ["bad", "bored", "tired"],
+  ["help me", "tell me story"],
+  ["ah", "yes", "ok", "okay", "nice"],
+  ["bye", "good bye", "goodbye", "see you later"],
+  ["what should i eat today"],
+  ["bro"],
+  ["what", "why", "how", "where", "when"],
+  ["no","not sure","maybe","no thanks"],
+  [""],
+  ["haha","ha","lol","hehe","funny","joke"]
+  ["tell me a joke","one joke please","Tell me a joke","One joke please","one more joke please","One more joke please"]
+];
+var grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;'
 
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
@@ -21,9 +48,7 @@ var hints = document.querySelector('.hints');
 var colorHTML= '';
 colors.forEach(function(v, i, a){
   console.log(v, i);
-  colorHTML += '<span style="background-color:' + v + ';"> ' + v + ' </span>';
 });
-hints.innerHTML = 'Tap/click then say a color to change the background color of the app. Try ' + colorHTML + '.';
 
 document.body.onclick = function() {
   recognition.start();
