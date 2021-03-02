@@ -71,7 +71,7 @@ recognition.onspeechend = function() {
 }
 
 recognition.onnomatch = function(event) {
-  diagnostic.textContent = "I didn't recognise that color.";
+ alert("sorry I did not recognised"
 }
 
 recognition.onerror = function(event) {
