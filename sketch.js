@@ -23,7 +23,8 @@ var colors = ["hi", "hey", "hello", "good morning", "good afternoon","how are yo
   "no","not sure","maybe","no thanks",
   "",
   "haha","ha","lol","hehe","funny","joke",
-  "tell me a joke","one joke please","Tell me a joke","One joke please","one more joke please","One more joke please"
+  "tell me a joke","one joke please","Tell me a joke","One joke please","one more joke please","One more joke please",
+     "what do you do","what is your hobby","what do you do in your leisure time"
 ];
 var grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;'
 
