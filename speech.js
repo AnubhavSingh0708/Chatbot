@@ -6,7 +6,7 @@ const textToSpeech = (string) => {
   let voice = new SpeechSynthesisUtterance(string);
   var voices = window.speechSynthesis.getVoices();
 
-voice.voice = voices[10];
+voice.voice = voices[0];
   voice.text = string;
   voice.lang = "en-US";
   voice.volume = 1;
