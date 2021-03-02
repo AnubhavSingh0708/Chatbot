@@ -71,7 +71,7 @@ recognition.onspeechend = function() {
 }
 
 recognition.onnomatch = function(event) {
- alert("sorry I did not recognised"
+ alert("sorry I did not recognised");
 }
 
 recognition.onerror = function(event) {
