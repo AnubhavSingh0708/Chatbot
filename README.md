@@ -19,7 +19,8 @@ here speech recognition is carried out by
 
 #### text to speech 
 text to speech using speech syntesyser 
-`function speak(string) {
+```
+function speak(string) {
 
   const u = new SpeechSynthesisUtterance();
 
@@ -39,4 +40,5 @@ text to speech using speech syntesyser
 
   speechSynthesis.speak(u);
 
-}`
+}
+```
