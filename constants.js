@@ -25,7 +25,9 @@ const prompts = [
   ["no","not sure","maybe","no thanks"],
   [""],
   ["haha","ha","lol","hehe","funny","joke"],
-  ["what do you do","what is your hobby","what do you do in your leisure time"]
+  ["what do you do","what is your hobby","what do you do in your leisure time"],
+  ["where do you live","where is our home"],
+  ["tell me a joke","one joke please","Tell me a joke","One joke please","one more joke please","One more joke please"]
 ]
 
 // Possible responses, in corresponding order
@@ -59,7 +61,9 @@ const replies = [
   ["That's ok","I understand","What do you want to talk about?"],
   ["Please say something :("],
   ["Haha!","Good one!"],
-  ["I just wait for you to come on internet and view me","nothing"]
+  ["I just wait for you to come on internet and view me","nothing"],
+  ["I live in internet","my houe is World Wide web its to hude that I can't even explore 1% of it"],
+  ["What will you call a rose which wants to go to moon gulab ja moon","what do elfes learn at school","what did teacher do with her student's report on history of cheese she grated it"]
 ]
 
 // Random for any other user input
