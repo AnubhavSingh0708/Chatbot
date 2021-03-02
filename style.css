@@ -76,6 +76,10 @@ input {
 	border-radius: 10%; 
 }
 .messages {
+	animation-name: example;
+  animation-duration: 1s;
+ animation-iteration-count: infinite;
+	padding-bottom: 25px;
 	overflow: scroll;
 	height: 100vh;
 	width: 100%;
@@ -115,4 +119,27 @@ input {
 		width: 100vw;
 		margin: 10vw;
 	}
+}
+@keyframes example {
+  0%{
+    background-image:linear-gradient(45deg,#ff00ff,#ff0000,#ffff00,#00ff00,#00ffff,#0000ff);
+  }
+  16.66666666666667%{
+    background-image:linear-gradient(45deg,#0000ff,#ff00ff,#ff0000,#ffff00,#00ff00,#00ffff);
+  }
+  33.33333333333334%{
+    background-image:linear-gradient(45deg,#00ffff,#0000ff,#ff00ff,#ff0000,#ffff00,#00ff00);
+  }
+  50%{
+    background-image:linear-gradient(45deg,#00ff00,#00ffff,#0000ff,#ff00ff,#ff0000,#ffff00);
+  }
+  66.66666666666667%{
+background-image:linear-gradient(45deg,#ffff00,#00ff00,#00ffff,#0000ff,#ff00ff,#ff0000);
+  }
+  83.33333333333334%{
+    background-image:linear-gradient(45deg,#ff0000,#ffff00,#00ff00,#00ffff,#0000ff,#ff00ff);
+  }
+  100%{
+    background-image:linear-gradient(45deg,#ff00ff,#ff0000,#ffff00,#00ff00,#00ffff,#0000ff);
+  }
 }
