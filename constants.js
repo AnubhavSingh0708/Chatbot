@@ -63,7 +63,7 @@ const replies = [
   ["Haha!","Good one!"],
   ["I just wait for you to come on internet and view me","nothing"],
   ["I live in internet","my houe is World Wide web its to hude that I can't even explore 1% of it"],
-  ["What will you call a rose which wants to go to moon gulab ja moon","what do elfes learn at school","what did teacher do with her student's report on history of cheese she grated it"]
+  ["What will you call a rose which wants to go to moon gulab ja moon","what do elfes learn at school","what did teacher do with her student report on history of cheese she grated it"]
 ]
 
 // Random for any other user input
