@@ -24,8 +24,8 @@ const prompts = [
   ["what", "why", "how", "where", "when"],
   ["no","not sure","maybe","no thanks"],
   [""],
-  ["haha","ha","lol","hehe","funny","joke"]
-  ["tell me a joke","one joke please","Tell me a joke","One joke please","one more joke please","One more joke please"]
+  ["haha","ha","lol","hehe","funny","joke"],
+  ["what do you do","what is your hobby","what do you do in your leisure time"]
 ]
 
 // Possible responses, in corresponding order
@@ -58,8 +58,8 @@ const replies = [
   ["Great question"],
   ["That's ok","I understand","What do you want to talk about?"],
   ["Please say something :("],
-  ["Haha!","Good one!"]
-  ["what will you call a rose which wants to go to moon Gulab Ja moon","what do elves larn at school elf-a-bet"]
+  ["Haha!","Good one!"]'
+  ["I just wait for you to come on internet and view me","nothing"]
 ]
 
 // Random for any other user input
