@@ -58,7 +58,7 @@ const replies = [
   ["Great question"],
   ["That's ok","I understand","What do you want to talk about?"],
   ["Please say something :("],
-  ["Haha!","Good one!"]'
+  ["Haha!","Good one!"],
   ["I just wait for you to come on internet and view me","nothing"]
 ]
 
