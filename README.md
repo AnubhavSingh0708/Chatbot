@@ -1,5 +1,5 @@
 # Chatbot
-this is a chatbot
+this is a chatbot whom you can talk with chat with
 ### key elements 
 1. speech recognition 
 2. finding reply 
