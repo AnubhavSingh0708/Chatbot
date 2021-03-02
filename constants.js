@@ -27,7 +27,7 @@ const prompts = [
   ["haha","ha","lol","hehe","funny","joke"],
   ["what do you do","what is your hobby","what do you do in your leisure time"],
   ["where do you live","where is our home"],
-  ["tell me a joke","one joke please","Tell me a joke","One joke please","one more joke please","One more joke please"]
+  ["tell me a joke","one joke please","one more joke please"]
 ]
 
 // Possible responses, in corresponding order
