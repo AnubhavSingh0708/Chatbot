@@ -1,10 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   const inputField = document.getElementById("input");
+    let input = inputField.value;
  document.getElementById("send").addEventListener("click", function() {
-      let input = inputField.value;
+   var str = input;
+   var whatIs = str.substr(0, 7);
+   if (whatIs=="what is"){
+     var search = str.substr(7);
+    var search1 = search.replace(/ /g, "+");
+     window.location.replace("https://www.google.com/search?q="+search1);
+   } else{
       inputField.value = "";
       output(input);
-  });
+   }
+ });
 });
 
 function output(input) {
