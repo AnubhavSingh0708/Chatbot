@@ -30,9 +30,6 @@ var colors = ["hi", "hey", "hello", "good morning", "good afternoon","how are yo
 var grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;'
 
 var recognition = new SpeechRecognition();
-var speechRecognitionList = new SpeechGrammarList();
-speechRecognitionList.addFromString(grammar, 1);
-recognition.grammars = speechRecognitionList;
 recognition.continuous = false;
 recognition.lang = 'en-US';
 recognition.interimResults = false;
