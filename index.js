@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     var search1 = search.replace(/ /g, "+");
      window.location.replace("https://www.google.com/search?q="+search1);
    } else{
-      inputField.value = "";
       output(input);
    }
  });
