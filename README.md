@@ -5,6 +5,7 @@ this is a chatbot whom you can talk with chat with
 2. finding reply 
 3. chat 
 4. text to speech 
+5. detecting a queston and answer
 #### speech recognition 
 here speech recognition is carried out by 
 1. `recognition.onstart` : This is an event handler that will run when the speech recognition service has begun listening to incoming audio. 
@@ -20,25 +21,22 @@ here speech recognition is carried out by
 #### text to speech 
 text to speech using speech syntesyser 
 ```
-function speak(string) {
+const synth = window.speechSynthesis;
 
-  const u = new SpeechSynthesisUtterance();
+const textToSpeech = (string) => {
+  let voce = new SpeechSynthesisUtterance(string);
+  var voices = window.speechSynthesis.getVoices();
 
-  allVoices = speechSynthesis.getVoices();
-
-  u.voice = allVoices.filter(voice => voice.name === "Alex")[0];
-
-  u.text = string;
-
-  u.lang = "en-US";
-
-  u.volume = 1; //0-1 interval
-
-  u.rate = 1;
-
-  u.pitch = 1; //0-2 interval
-
-  speechSynthesis.speak(u);
-
+voce.voice = voices[0];
+  voce.text = string;
+  voce.lang = "en-US";
+  voce.volume = 1;
+  voce.rate = 1;
+  voce.pitch = 1; // Can be 0, 1, or 2
+  synth.speak(voce);//here voise is the reply of chatbot
 }
 ```
+### if the user askes a question
+then the chatbot will recogonise it by `if (text.match(/(what is|what's |What is)/gi)){}`
+and then it will ask you to make decison to redirect or stay there or redirect using`confirm("Do you want to redirect to "+topicOfQ)`
+and then google search using `location.replace("https://www.google.com/search?q="+searchFor);`
