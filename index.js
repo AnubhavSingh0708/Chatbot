@@ -33,8 +33,11 @@ function output(input) {
     product = coronavirus[Math.floor(Math.random() * coronavirus.length)];
      addChat(input, product);
   }else if (text.match(/(what is|what's |What is)/gi)) {
-    // If no match, check if message contains `coronavirus`
-    
+   //if question is asked
+    var topicOfQ = text.replace(/What is /g, "");
+    var searchFor = topicOfQ.replace(/ /g, "+");
+    alert("redirecting to"+topicOfQ);
+     location.replace("https://www.google.com/search?q="+searchFor);
   } else {
     // If all else fails: random alternative
     product = alternative[Math.floor(Math.random() * alternative.length)];
