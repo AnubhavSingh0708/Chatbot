@@ -36,8 +36,12 @@ function output(input) {
    //if question is asked
     var topicOfQ = text.replace(/What is /g, "");
     var searchFor = topicOfQ.replace(/ /g, "+");
-    alert("redirecting to"+topicOfQ);
-     location.replace("https://www.google.com/search?q="+searchFor);
+    if (confirm("Do you want to redirect to "+topicOfQ)) {
+ location.replace("https://www.google.com/search?q="+searchFor);
+  } else {
+ product = alternative[Math.floor(Math.random() * alternative.length)];
+     addChat(input, product);
+  }
   } else {
     // If all else fails: random alternative
     product = alternative[Math.floor(Math.random() * alternative.length)];
