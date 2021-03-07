@@ -38,19 +38,7 @@ function output(input) {
     var searchFor = topicOfQ.replace(/ /g, "+");
     if (confirm("Do you want to redirect to "+topicOfQ)) {
  location.assign("https://www.google.com/search?q"+searchFor);
-  } else if (text.match(/(tell|tell me|told)/gi)) {
-
-   //if question is asked
-
-
-
-    searchFor = text.replace(/ /g, "+");
-
-    if (confirm("Do you want to redirect to "+searchFor)) {
-
- location.assign("https://www.google.com/search?q"+searchFor);
-
-  }else {
+  } else {
  product = alternative[Math.floor(Math.random() * alternative.length)];
      addChat(input, product);
   }
