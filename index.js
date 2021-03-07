@@ -42,11 +42,7 @@ function output(input) {
  product = alternative[Math.floor(Math.random() * alternative.length)];
      addChat(input, product);
   }
-  } else {
-    // If all else fails: random alternative
-    product = alternative[Math.floor(Math.random() * alternative.length)];
-     addChat(input, product);
-  }
+
   // Update DOM
  
 }
