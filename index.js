@@ -34,10 +34,10 @@ function output(input) {
      addChat(input, product);
   }else if (text.match(/(what is|what's |What is)/gi)) {
    //if question is asked
-    var topicOfQ = text.replace(/What is /g, "");
+    var topicOfQ = text.replace(/What is /g, "=");
     var searchFor = topicOfQ.replace(/ /g, "+");
     if (confirm("Do you want to redirect to "+topicOfQ)) {
- location.assign("https://www.google.com/search?q="+searchFor);
+ location.assign("https://www.google.com/search?q"+searchFor);
   } else {
  product = alternative[Math.floor(Math.random() * alternative.length)];
      addChat(input, product);
