@@ -24,17 +24,24 @@ function output(input) {
   if (compare(prompts, replies, text)) { 
     // Search for exact match in `prompts`
     product = compare(prompts, replies, text);
+     addChat(input, product);
   } else if (text.match(/thank/gi)) {
     product = "You're welcome!"
+     addChat(input, product);
   } else if (text.match(/(corona|covid|virus)/gi)) {
     // If no match, check if message contains `coronavirus`
     product = coronavirus[Math.floor(Math.random() * coronavirus.length)];
+     addChat(input, product);
+  }else if (text.match(/(what is|what's |What is)/gi)) {
+    // If no match, check if message contains `coronavirus`
+    
   } else {
     // If all else fails: random alternative
     product = alternative[Math.floor(Math.random() * alternative.length)];
+     addChat(input, product);
   }
   // Update DOM
-  addChat(input, product);
+ 
 }
 function compare(promptsArray, repliesArray, string) {
   let reply;
