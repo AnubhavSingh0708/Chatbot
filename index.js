@@ -44,7 +44,7 @@ function output(input) {
 
 
 
-    var searchFor = text.replace(/ /g, "+");
+    searchFor = text.replace(/ /g, "+");
 
     if (confirm("Do you want to redirect to "+searchFor)) {
 
