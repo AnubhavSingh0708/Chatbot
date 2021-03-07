@@ -1,27 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   const inputField = document.getElementById("input");
-    let input = inputField.value;
  document.getElementById("send").addEventListener("click", function() {
-   var str = input;
-   var whatIs = str.substr(0, 7);
-   if (whatIs=="what is"){
-     var search = str.substr(7);
-    var search1 = search.replace(/ /g, "+");
-     window.location.replace("https://www.google.com/search?q="+search1);
-   } else{
+      let input = inputField.value;
+      inputField.value = "";
       output(input);
-   }
- });
+  });
 });
 
 function output(input) {
   let product;
-
   // Regex remove non word/space chars
   // Trim trailing whitespce
   // Remove digits - not sure if this is best
   // But solves problem of entering something like 'hi1'
-
   let text = input.toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
   text = text
     .replace(/ a /g, " ")   // 'tell me a story' -> 'tell me story'
@@ -30,7 +21,6 @@ function output(input) {
     .replace(/please /g, "")
     .replace(/ please/g, "")
     .replace(/r u/g, "are you");
-
   if (compare(prompts, replies, text)) { 
     // Search for exact match in `prompts`
     product = compare(prompts, replies, text);
@@ -43,11 +33,9 @@ function output(input) {
     // If all else fails: random alternative
     product = alternative[Math.floor(Math.random() * alternative.length)];
   }
-
   // Update DOM
   addChat(input, product);
 }
-
 function compare(promptsArray, repliesArray, string) {
   let reply;
   let replyFound = false;
@@ -68,16 +56,13 @@ function compare(promptsArray, repliesArray, string) {
   }
   return reply;
 }
-
 function addChat(input, product) {
   const messagesContainer = document.getElementById("messages");
-
   let userDiv = document.createElement("div");
   userDiv.id = "user";
   userDiv.className = "user response";
   userDiv.innerHTML = `<img src="user.png" class="avatar"><span>${input}</span>`;
   messagesContainer.appendChild(userDiv);
-
   let botDiv = document.createElement("div");
   let botImg = document.createElement("img");
   let botText = document.createElement("span");
@@ -91,12 +76,10 @@ function addChat(input, product) {
   messagesContainer.appendChild(botDiv);
   // Keep messages at most recent
   messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer.clientHeight;
-
   // Fake delay to seem "real"
   setTimeout(() => {
     botText.innerText = `${product}`;
     textToSpeech(product)
   }, 2000
   )
-
 }
