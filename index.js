@@ -1,3 +1,5 @@
+var topicOfQ;
+ var searchFor;
 document.addEventListener("DOMContentLoaded", () => {
   const inputField = document.getElementById("input");
  document.getElementById("send").addEventListener("click", function() {
@@ -33,8 +35,8 @@ function output(input) {
      addChat(input, product);
   }else if (text.match(/(what is|what's |What is)/gi)) {
    //if question is asked
-    var topicOfQ = text.replace(/what is /g, "=");
-    var searchFor = topicOfQ.replace(/ /g, "+");
+    topicOfQ = text.replace(/what is /g, "=");
+   searchFor = topicOfQ.replace(/ /g, "+");
     if (confirm("Do you want to redirect to "+topicOfQ)) {
  location.assign("https://www.google.com/search?q"+searchFor);
   } else {
@@ -43,10 +45,10 @@ function output(input) {
   }
   }else if (text.match(/(tell|tell me|told)/gi)) {
    //if question is asked
-    var topicOfQ = text.replace(/tell me the/g, " ")
+    topicOfQ = text.replace(/tell me the/g, " ")
     .replace(/tell me/g, " ")
     .replace(/tell/g, " ");
-    var searchFor = topicOfQ.replace(/ /g, "+");
+     searchFor = topicOfQ.replace(/ /g, "+");
     if (confirm("Do you want to redirect to "+topicOfQ)) {
  location.assign("https://www.google.com/search?q="+searchFor);
   } else {
