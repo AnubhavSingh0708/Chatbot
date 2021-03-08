@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputField = document.getElementById("input");
  document.getElementById("send").addEventListener("click", function() {
       let input = inputField.value;
-      inputField.value = "";
       output(input);
   });
 });
