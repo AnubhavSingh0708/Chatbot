@@ -41,6 +41,18 @@ function output(input) {
  product = alternative[Math.floor(Math.random() * alternative.length)];
      addChat(input, product);
   }
+  }else if (text.match(/(tell|tell me|told)/gi)) {
+   //if question is asked
+    var topicOfQ = text.replace(/tell me the/g, " ")
+    .replace(/tell me/g, " ")
+    .replace(/tell/g, " ");
+    var searchFor = topicOfQ.replace(/ /g, "+");
+    if (confirm("Do you want to redirect to "+topicOfQ)) {
+ location.assign("https://www.google.com/search?q="+searchFor);
+  } else {
+ product = alternative[Math.floor(Math.random() * alternative.length)];
+     addChat(input, product);
+  }
   } else {
     // If all else fails: random alternative
     product = alternative[Math.floor(Math.random() * alternative.length)];
