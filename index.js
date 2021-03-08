@@ -41,6 +41,9 @@ function output(input) {
   } else {
  product = alternative[Math.floor(Math.random() * alternative.length)];
      addChat(input, product);
+  } else {
+ product = alternative[Math.floor(Math.random() * alternative.length)];
+     addChat(input, product);
   }
 
   // Update DOM
