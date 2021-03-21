@@ -48,7 +48,7 @@ const replies = [
   ["I am infinite"],
   ["I am just a bot", "I am a bot. What are you?"],
   ["BPCCC", "JavaScript"],
-  ["BPCCC", "my name is Boro party chuta chuti club but you can call me BPCCC"],
+  ["Chatbot", "I am a chatbot I havent got a name from my creator"],
   ["I love you too", "Me too"],
   ["Have you ever felt bad?", "Glad to hear it"],
   ["Why?", "Why? You shouldn't!", "Try watching TV"],
