@@ -1,0 +1,17 @@
+{
+  "background_color": "#c0c0c0",
+  "description": "A chatbot",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color":"#ff0000",
+  "icons": [
+    {
+      "src": "https://anubhavsingh0708.github.io/BPCCC/bpccc512.webp",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "name": "Chatbot",
+  "short_name": "chatbot",
+  "start_url": "https://anubhavsingh0708.github.io/Chatbot/"
+}
