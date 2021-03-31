@@ -17,7 +17,6 @@ here speech recognition is carried out by
 2. finding replies from `constants.js` using `const prompt` array and `const replies` array.
 3. choosing correct answer by using index of array of prompts and replies 
 #### chat 
-
 #### text to speech 
 text to speech using speech syntesyser 
 ```
